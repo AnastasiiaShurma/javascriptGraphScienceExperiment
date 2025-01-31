@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<title>Javascript Graph Plotting Challenge</title>
+</head>
+<body>
+
+<div id="tester" style="width:700px;height:500px;"></div>
+
+<script>
+ TESTER = document.getElementById('tester');
+ 
+var data = [{
+  x: [0, 0.5, 1, 1.5, 2, 2.5],
+  y: [18.61, 2.94, -5.18, -10.43, -18.72, -20.24]
+}];
+
+var layout = {
+  title: {
+    text: 'Investigating Osmosis in Potato Cells'
+  },
+  xaxis: {
+    title: {
+      text: 'Concentration in the substance / %'
+    },
+    showgrid: false,
+    zeroline: false
+  },
+  yaxis: {
+    title: {
+      text: 'Change in potatos mass / %'
+    },
+    showline: false
+  }
+};
+
+Plotly.newPlot('tester', data, layout);
+
+</script>
+</body>
+</html>
